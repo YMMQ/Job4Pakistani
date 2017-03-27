@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Listing Degrees</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Drege type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @degres.each do |degre| %>
+      <tr>
+        <td><%= degre.name %></td>
+        <td><%= degre.tdegree.name %></td>
+        <td><%= link_to 'Show', degre, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_degre_path(degre), class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', degre, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Degre', new_degre_path %>

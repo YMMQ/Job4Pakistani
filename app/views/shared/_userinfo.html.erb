@@ -1,0 +1,35 @@
+<% @user.userinfos.each do |info| %>
+
+	<p>
+		<strong>Date of Birth:</strong>
+		<%= info.date_of_birth.strftime("%B %d, %Y") %>
+		&nbsp;&nbsp;&nbsp;
+		<strong>Gender:</strong>
+		<%= info.gender %>
+	</p>
+
+	<p>
+		<strong>Mobile:</strong>
+		<%= info.mobile %>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>CNIC:</strong>
+		<%= info.cnic %>
+	</p>
+
+	<p>
+		<strong>Province:</strong>
+		<%= info.province.name %>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>City:</strong>
+		<%= info.city.name %>
+	</p>
+
+	<p>
+		<strong>Address:</strong>
+		<%= info.address %>
+	</p>
+
+<br>
+<%= link_to 'Edit Profile', edit_user_userinfo_path(@user, info),
+																															class: "btn btn-success" %>
+<% end %>

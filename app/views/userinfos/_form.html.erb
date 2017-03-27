@@ -1,0 +1,48 @@
+
+<%= form_for([@user, @user.userinfos.build]) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="row">
+    <div class="col-md-8">
+    	<%= f.label :date_of_birth, "Date of Birth" %><br>
+      <%= f.date_select(:date_of_birth, start_year: 1970, order: [:day, :month, :year],prompt: { day: 'Day', month: 'Month', year: 'Year' }) %>
+    </div>
+  </div>
+
+ <div class="row">
+	 <div class="col-md-1">
+		  <%= f.radio_button :gender, "Male" %>
+	 </div>
+   <%= f.label :gender, "Male" %>
+ </div>
+
+ <div class="row">
+	 <div class="col-md-1">
+		  <%= f.radio_button :gender, "Female" %>
+	 </div>
+    <%= f.label :gender, "Female" %>
+ </div>
+
+  <div class="row">
+    <div class="col-xs-4 col-md-4">
+      <%= f.text_field :mobile, class: "form-control", placeholder: "Phone" %>
+    </div>
+    <div class="col-xs-4 col-md-4">
+    <%= f.text_field :cnic, class: "form-control", placeholder: "CNIC" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+      <%= f.collection_select :province_id, Province.all, :id, :name, prompt: "--Select Province--" %>
+    <%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name, :id, :name, prompt: "--Select City--" %>
+    </div>
+  </div>
+
+
+
+    <%= f.text_area :address, class: "form-control", placeholder: "Address" %>
+
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>

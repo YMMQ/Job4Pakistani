@@ -1,0 +1,164 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box_sizing {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html {
+overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  background-image: url(/assets/background8.jpg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+line-height: 1;
+}
+h1 {
+font-size: 3em;
+letter-spacing: -2px;
+margin-bottom: 30px;
+text-align: center;
+}
+h2 {
+letter-spacing: -1px;
+margin-bottom: 30px;
+text-align: center;
+font-weight: normal;
+color: $gray-light;
+}
+p {
+font-size: 1.1em;
+line-height: 1.7em;
+}
+
+.leftbar {
+	padding-left: 2px;
+}
+
+.rightbar {
+	padding-right: 2px;
+}
+
+input, button, textarea, uneditable-input {
+width: 100%;
+margin-bottom: 15px;
+@include box_sizing;
+}
+input {
+height: auto !important;
+}
+textarea {
+resize: none;
+}
+#error_explanation {
+color: red;
+ul {
+color: red;
+margin: 0 0 30px 0;
+}
+}
+.field_with_errors {
+@extend .has-error;
+.form-control {
+color: $state-danger-text;
+}
+}
+.remember-box {
+margin-right: 3px;
+}
+.checkbox {
+margin-top: -10px;
+margin-bottom: 10px;
+span {
+margin-top: -10px;
+}
+}
+#session_remember_me {
+width: auto;
+margin-left: 0;
+}
+.users {
+list-style: none;width: 100%;
+margin-bottom: 15px;
+margin: 0;
+li {
+overflow: auto;
+padding: 10px 0;
+border-bottom: 1px solid $gray-lighter;
+}
+}
+
+
+.ads728x90 {
+	border: 1px solid gray;
+	width: 728px;
+	height: 90px;
+}
+
+.ads728x90 h3 {
+	text-align: center;
+	line-height: auto;
+}
+
+select {
+	width: 31%;
+	margin-bottom: 15px;
+	border: 1px solid #BDBDBD;
+	border-radius: 4px;
+	padding: 6px;
+	background-color: white;
+	@include box_sizing;
+}
+
+select focus {
+	box-shadow: 0px 0px 3px blue;
+}
+
+.nav-avatar {
+	margin-top: 5px;
+}
+
+.select select {
+	width: 49.5%;
+	margin-bottom: 15px;
+	border: 1px solid #BDBDBD;
+	border-radius: 4px;
+	padding: 6px;
+	background-color: white;
+	@include box_sizing;
+}
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }

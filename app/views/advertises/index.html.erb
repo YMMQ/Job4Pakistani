@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+<center><h1>Jobs</h1></center>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Advertise Date</th>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>Last Date</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <%= will_paginate @city, renderer: BootstrapPagination::Rails %>
+  	<% @advertises.each do |advertise| %>
+      <tr>
+        <td><%= advertise.add_date.strftime("%d-%m-%Y") %></td>
+        <td><%= link_to advertise.title, advertise %></td>
+        <td><%= advertise.organization.name %></td>
+        <td><%= advertise.last_date.strftime("%d-%m-%Y") %></td>
+        <td><%= link_to "View Image", advertise.image.url, class: "btn btn-success" %></td>
+        <td><%= link_to 'Read More', advertise %></td>
+    <% if logged_in_admin? %>
+       <td> <%= link_to 'Edit', edit_advertise_path(advertise) %></td>
+       <td> <%= link_to 'Destroy', advertise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+	</div>
+	</div>
+<% end %>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+<% if logged_in_admin? %>
+	<div class="panel panel-default">
+	<div class="panel-heading">
+		<%= link_to 'New Advertise', new_advertise_path %>
+	</div>
+	</div>
+<% end %>

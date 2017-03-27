@@ -1,0 +1,70 @@
+<br>
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p><strong>Email:</strong>  <%= mail_to @user.email %></p>
+        <% if @user.userinfos.exists? %>
+          <%= render 'shared/userinfo' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <span class="thumbnail">
+      <%= avatar3(@user) %>
+    </span>
+    <% if user_signed_in? %>
+      <button class="btn btn-primary" type="button" data-toggle="collapse"
+              data-target="#addAvatar" aria-expanded="false" aria-controls="collapseExample">
+        Upload Photo
+      </button>
+    <% end %>
+  </div>
+</div>
+<div class="collapse" id="addAvatar">
+  <div class="well">
+    <%= render 'devise/registrations/edit' %>
+  </div>
+</div>
+<div class="well">
+  <%= render 'userinfos/form2' %>
+</div>
+
+<% if @user.userinfos.exists? %>
+  <% if @user.educations.exists? %>
+    <%= render 'shared/education' %>
+  <% end %>
+  <% if user_signed_in? %>
+    <button class="btn btn-default" type="button" data-toggle="collapse"
+            data-target="#addEducation" aria-expanded="false" aria-controls="collapseExample">
+      Add Education
+    </button>
+    <br><br>
+    <div class="collapse" id="addEducation">
+      <div class="well">
+        <%= render 'educations/form' %>
+      </div>
+    </div>
+  <% end %>
+  <% if @user.experiences.exists? %>
+    <%= render 'shared/experience' %>
+  <% end %>
+  <% if user_signed_in? %>
+    <button class="btn btn-default" type="button" data-toggle="collapse"
+            data-target="#addExperience" aria-expanded="false" aria-controls="collapseExample">
+      Add Experience
+    </button>
+    <br><br>
+    <div class="collapse" id="addExperience">
+      <div class="well">
+        <%= render 'experiences/form' %>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p class="alert alert-warning">Update your profile for futher steps you want to do.</p>
+  <div class="well">
+    <%= render 'userinfos/form' %>
+  </div>
+<% end %>

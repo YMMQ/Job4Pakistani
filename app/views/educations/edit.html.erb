@@ -1,0 +1,33 @@
+<h2>Edit Education</h2>
+<%= form_for([current_user, @education]) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="row">
+     <div class="col-md-3">
+          <%= f.collection_select(:division_id, Division.all, :id, :name,
+          {prompt: "Div/Grade/CGPA"}, class: "form-control") %>
+     </div>
+     <div class="col-md-3">
+      <%= f.text_field :obtained_marks, class: "form-control", placeholder: "Obtained Marks" %>
+     </div>
+      <div class="col-md-3">
+      <%= f.text_field :total_marks, class: "form-control", placeholder: "Total Marks" %>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-3">
+          <%= f.collection_select(:degre_id, Degre.all, :id, :name,
+          {prompt: "Select Degree"}, class: "form-control") %>
+     </div>
+     <div class="col-md-3">
+          <%= f.collection_select(:institute_id, Institute.all, :id, :name,
+          {prompt: "Select Institute"}, class: "form-control") %>
+     </div>
+     <div class="col-md-3">
+      <%= f.date_select(:pass_year, start_year: 1985, discard_day: true, discard_month: true,prompt: "Select Year") %>
+      </div>
+
+   </div>
+
+    <%= f.submit "Update", class: "btn btn-primary" %>
+
+<% end %>

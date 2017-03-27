@@ -1,0 +1,22 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Job Title</th>
+      <th>City</th>
+      <th>Qualifiction</th>
+      <th>Qty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @advertise.jobs.each do |job| %>
+<tr>
+  <td><%= job.work_field.field_name %></td>
+	<td><%= job.city.name %></td>
+	<td><%= job.degre.name %></td>
+	<td><%= job.qty %></td>
+</tr>
+	</tbody>
+<% end %>
+

@@ -1,0 +1,30 @@
+<h1>Users</h1>
+<% @users.each do |user| %><br>
+	<b><%= user.first_name %> <%= user.last_name %></b>
+	<table class="table table-striped">
+			<thead>
+				<tr>
+				  <th>Division</th>
+				  <th>Obt: Marks</th>
+				  <th>Pass year</th>
+				  <th>Degree</th>
+				  <th>Institute</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% user.educations.each do |education| %>
+				  <tr>
+				    <td><%= education.division %></td>
+				    <td><%= education.obtained_marks %></td>
+				    <td><%= education.pass_year %></td>
+				    <td><%= education.degre.name_with_type %></td>
+				    <td><%= education.institute.name_with_city %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	<hr>
+<% end %>
+
+

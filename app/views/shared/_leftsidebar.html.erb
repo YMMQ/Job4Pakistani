@@ -1,0 +1,17 @@
+<br>
+<% if logged_in_admin? %>
+	<div class="list-group">
+		<span class="list-group-item active">
+			<h4><b>Dashboard</b></h4>
+		</span>
+		<span class="list-group-item">
+		  <li><%= link_to 'Advertisment', advertises_path %></li>
+		  <li><%= link_to 'City', cities_path %></li>
+	      <li><%= link_to 'Degree', degres_path %></li>
+	      <li><%= link_to 'Institute', institutes_path %></li>
+	      <li><%= link_to 'Organization', organizations_path %></li>
+	      <li><%= link_to 'Work Field', work_fields_path %></li>
+		</span>
+	</div>
+<% end %>
+ 

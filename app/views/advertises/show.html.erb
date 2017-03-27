@@ -1,0 +1,22 @@
+
+
+<br>
+<div class="well well-sm">
+	<center><h4><%= @advertise.title %></h4></center>
+</div>
+<% if @advertise.jobs.exists? %>
+	<%= render 'shared/job_list' %>
+<% end %>
+
+<% if logged_in_admin? %>
+<button class="btn btn-primary" type="button" data-toggle="collapse"
+				data-target="#addEducation" aria-expanded="false" aria-controls="collapseExample">
+	Add Jobs
+</button>
+<br><br>
+<div class="collapse" id="addEducation">
+	<div class="well">
+		<%= render 'jobs/form' %>
+	</div>
+</div>
+<% end %>

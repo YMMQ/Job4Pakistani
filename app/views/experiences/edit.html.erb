@@ -1,0 +1,27 @@
+<h2>Edit Experience</h2>
+<%= form_for([current_user, @experience]) do |f| %>
+
+<%= f.text_area :work_type, class: "form-control", placeholder: "Type of Work Experience" %>
+   <div class="row">
+    <div class="col-md-4">
+    <%= f.collection_select(:work_field_id, WorkField.all, :id, :field_name,
+        {prompt: "Select Work Type"}, class: "form-control" ) %>
+   </div>
+   <div class="col-md-4">
+    <%= f.collection_select(:organization_id, Organization.all, :id, :name,
+        {prompt: "Select Organization"}, class: "form-control" ) %>
+   </div>
+   <div class="col-md-4">
+    <%= f.collection_select(:city_id, City.all, :id, :name,
+        {prompt: "Select City"}, class: "form-control" ) %>
+   </div>
+   </div>
+
+    <%= f.date_select(:start_date, start_year: 1990, order: [:day, :month, :year],
+        prompt: { day: 'Start Date', month: 'Start Month', year: 'Start Year' }) %>
+    <%= f.date_select(:end_date, start_year: 1990, order: [:day, :month, :year],
+        prompt: { day: 'End Date', month: 'End Month', year: 'End Year' }) %>
+
+    <%= f.submit "Add Experience", class: "btn btn-primary" %>
+
+<% end %>

@@ -1,0 +1,157 @@
+id,province_id,name
+1,1,Attock
+2,1,Bahawalnagar
+3,1,Bahawalpur
+4,1,Bhakkar
+5,1,Chakwal
+6,1,Chiniot
+7,1,Dera Ghazi Khan
+8,1,Faisalabad
+9,1,Gujranwala
+10,1,Gujrat
+11,1,Hafizabad
+12,1,Jhang
+13,1,Jhelum
+14,1,Kasur
+15,1,Khanewal
+16,1,Khushab
+17,1,Lahore
+18,1,Layyah
+19,1,Lodhran
+20,1,Mandi Bahauddin
+21,1,Mianwali
+22,1,Multan
+23,1,Muzaffargarh
+24,1,Narowal
+25,1,Nankana Sahib
+26,1,Okara
+27,1,Pakpattan
+28,1,Rahim Yar Khan
+29,1,Rajanpur
+30,1,Rawalpindi
+31,1,Sahiwal
+32,1,Sargodha
+33,1,Sheikhupura
+34,1,Sialkot
+35,1,Toba Tek Singh
+36,1,Vehari
+37,2,Badin
+38,2,Dadu
+39,2,Ghotki
+40,2,Hyderabad
+41,2,Jacobabad
+42,2,Jamshoro
+43,2,"KARACHI (East, West, South,"
+44,2,Kashmore
+45,2,Khairpur
+46,2,Larkana
+47,2,Matiari
+48,2,Mirpurkhas
+49,2,Naushahro Firoze
+50,2,Shaheed Benazirabad
+51,2,Kambar Shahdadkot
+52,2,Sanghar
+53,2,Sujawal
+54,2,Shikarpur
+55,2,Sukkur
+56,2,Tando Allahyar
+57,2,Tando Muhammad Khan
+58,2,Tharparkar
+59,2,Thatta
+60,2,Umerkot
+61,3,Abbottabad
+62,3,Bannu
+63,3,Battagram
+64,3,Buner
+65,3,Charsadda
+66,3,Chitral
+67,3,Dera Ismail Khan
+68,3,Hangu
+69,3,Haripur
+70,3,Karak
+71,3,Kohat
+72,3,Kohistan
+73,3,Lakki Marwat
+74,3,Lower Dir
+75,3,Malakand
+76,3,Mansehra
+77,3,Mardan
+78,3,Nowshera
+79,3,Peshawar
+80,3,Shangla
+81,3,Swabi
+82,3,Swat
+83,3,Tank
+84,3,Tor Ghar
+85,3,Upper Dir
+86,4,Awaran
+87,4,Barkhan
+88,4,Kachi (Bolan)
+89,4,Chagai
+90,4,Dera Bugti
+91,4,Gwadar
+92,4,Harnai
+93,4,Jafarabad
+94,4,Jhal Magsi
+95,4,Kalat
+96,4,Kech (Turbat)
+97,4,Kharan
+98,4,Kohlu
+99,4,Khuzdar
+100,4,Killa Abdullah
+101,4,Killa Saifullah
+102,4,Lasbela
+103,4,Loralai
+104,4,Mastung
+105,4,Musakhel
+106,4,Nasirabad
+107,4,Nushki
+108,4,Panjgur
+109,4,Pishin
+110,4,Quetta
+111,4,Sherani
+112,4,Sibi
+113,4,Washuk
+114,4,Zhob
+115,4,Ziarat
+116,4,Lehri (not on the map)
+117,4,Sohbatpur (not on the map)
+118,4,Turbat
+119,5,Bajaur Agency
+120,5,Khyber Agency
+121,5,Kurram Agency
+122,5,Mohmand Agency
+123,5,North Waziristan Agency
+124,5,Orakzai Agency
+125,5,South Waziristan Agency
+126,5,FR Bannu
+127,5,FR Dera Ismail Khan
+128,5,FR Kohat
+129,5,FR Lakki Marwat
+130,5,FR Peshawar
+131,5,FR Tank
+132,6,Muzaffarabad
+133,6,Hattian
+134,6,Neelum
+135,6,Mirpur
+136,6,Bhimber
+137,6,Kotli
+138,6,Poonch
+139,6,Bagh
+140,6,Haveli
+141,6,Sudhnati
+142,7,Astore
+143,7,Diamer
+144,7,Ghizer
+145,7,Ghanche
+146,7,Gilgit
+147,7,Hunza-Nagar
+148,7,Roundu
+149,7,Skardu
+150,7,Shigar
+151,8,Islamabad
+152,6,Rawalakot
+153,1,Taxila 
+154,2,Nawabshah
+155,2,Tandojam
+156,2,Sakrand

@@ -1,0 +1,30 @@
+<h3>Experiences</h3>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Work type</th>
+      <th>Work field</th>
+      <th>Organization</th>
+      <th>City</th>
+      <th>Start date</th>
+      <th>End date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.experiences.each do |experience| %>
+      <tr>
+        <td><%= experience.work_type %></td>
+        <td><%= experience.work_field.field_name %></td>
+        <td><%= experience.organization.name %></td>
+        <td><%= experience.city.name %></td>
+        <td><%= experience.start_date.strftime("%d-%m-%Y") %></td>
+        <td><%= experience.end_date.strftime("%d-%m-%Y") %></td>
+        <td><%= link_to "", edit_user_experience_path(current_user, experience),
+                                                class: "glyphicon glyphicon-pencil" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr>

@@ -1,0 +1,32 @@
+<h3>Educations</h3>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Degree</th>
+      <th>Subject</th>
+      <th>Total Marks</th>
+      <th>Obt: Marks</th>
+      <th>Division</th>
+      <th>Pass year</th>
+      <th>Institute</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.educations.each do |education| %>
+      <tr>
+        <td><%= education.degre.name %></td>
+        <td><%= education.subject %></td>
+        <td><%= education.total_marks %></td>
+        <td><%= education.obtained_marks %></td>
+        <td><%= education.division.name %></td>
+        <td><%= education.pass_year.strftime("%Y") %></td>
+        <td><%= education.institute.name %></td>
+        <td><%= link_to "", edit_user_education_path(current_user, education),
+                                            class: "glyphicon glyphicon-pencil" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr>

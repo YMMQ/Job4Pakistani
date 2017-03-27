@@ -1,0 +1,13 @@
+<%= form_for(@advertise, html: {multipart: true}) do |f| %>
+
+		<%= f.text_field :title, class: "form-control", placeholder: "Advertise Title" %>
+    	<%= f.collection_select(:organization_id, Organization.all, :id, :name,
+        {prompt: "Select Organization"}, class: "form-control" ) %>
+        <%= f.date_select(:add_date, order: [:day, :month, :year],prompt: { day: 'Start Date', month: 'Start Month', year: 'Start Year' }) %>
+    	<%= f.date_select(:last_date, order: [:day, :month, :year],prompt: { day: 'End Date', month: 'End Month', year: 'End Year' }) %>
+		<%= f.text_area :description, size: "1x1", class: "form-control", placeholder: "Advertise Title" %>
+    <%= f.file_field :image %>
+
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>
