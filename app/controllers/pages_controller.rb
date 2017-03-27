@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
 
   def home
+    
+    
+    @advertises = Advertise.all.paginate(page: params[:page])
   	@user = current_user
   end
 
